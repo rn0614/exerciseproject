@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.myexercise.myEx.dao.IExerciseDAO">
+  	<resultMap type="com.myexercise.myEx.model.ExerciseVO" id="exerciseResult">
+  			<result property="dateNo" column="dateNo" />
+  			<result property="day" column="day" />
+  			<result property="id" column="id" />
+  			<result property="exName" column="exName" />
+  			<result property="weight" column="weight" />
+  			<result property="count" column="count" />
+  		</resultMap>
+  		
+  		
+  		<!-- 운동조회 -->
+  		<select id="exerciseList" resultMap="exerciseResult">
+  			SELECT * FROM day
+  		</select>
+ </mapper>
